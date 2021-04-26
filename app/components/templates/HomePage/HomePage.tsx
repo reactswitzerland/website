@@ -1,13 +1,9 @@
 import styles from './HomePage.module.scss';
+import Counter from '@module/Counter/Counter';
 
 const HomePage = () => (
   <div className={styles.content}>
-    <span className={styles.author}>
-      Made by{' '}
-      <a href={'https://yannickwittwer.dev'} target="_blank" rel="noreferrer">
-        yannickwittwer.dev
-      </a>
-    </span>
+    <Counter />
   </div>
 );
 

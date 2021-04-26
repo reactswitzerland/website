@@ -17,6 +17,7 @@
     "cypress:open": "cypress open"
   },
   "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.34",
     "next": "10.0.0",
     "react": "17.0.0",
     "react-dom": "17.0.0",

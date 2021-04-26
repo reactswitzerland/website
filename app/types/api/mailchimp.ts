@@ -1,0 +1,3 @@
+interface SubscriberCount {
+  count: number;
+}

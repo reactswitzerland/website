@@ -16,15 +16,20 @@ const getHttpHeaders = (isAuthenticated = false): AxiosRequestConfig => {
   return {};
 };
 
-const get = (path: string): Promise<AxiosResponse> => axios.get(path, getHttpHeaders());
+const get = <T>(path: string): Promise<AxiosResponse<T>> =>
+  axios.get(path, getHttpHeaders());
 
-const del = (path: string): Promise<AxiosResponse> => axios.delete(path, getHttpHeaders());
+const del = <T>(path: string): Promise<AxiosResponse<T>> =>
+  axios.delete(path, getHttpHeaders());
 
-const post = (path: string, data: any): Promise<AxiosResponse> => axios.post(path, data, getHttpHeaders());
+const post = <T>(path: string, data: any): Promise<AxiosResponse<T>> =>
+  axios.post(path, data, getHttpHeaders());
 
-const put = (path: string, data: any): Promise<AxiosResponse> => axios.post(path, data, getHttpHeaders());
+const put = <T>(path: string, data: any): Promise<AxiosResponse<T>> =>
+  axios.post(path, data, getHttpHeaders());
 
-const patch = (path: string, data: any): Promise<AxiosResponse> => axios.post(path, data, getHttpHeaders());
+const patch = <T>(path: string, data: any): Promise<AxiosResponse<T>> =>
+  axios.post(path, data, getHttpHeaders());
 
 export default {
   get,
