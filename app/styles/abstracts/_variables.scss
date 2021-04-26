@@ -1,9 +1,17 @@
-$color-primary: #faa916;
+$color-primary: #61dafb;
 $color-black: #050517;
 $color-white: #fff;
 
 $grid-columns: 12;
 $grid-gutter-width: 3rem;
+
+$default-gradient: linear-gradient(
+  135deg,
+  rgba(255, 255, 255, 0.4) 0%,
+  rgba(255, 255, 255, 0.1) 100%,
+  rgba(216, 216, 216, 0.1) 100%
+);
+$default-border-radius: 2rem;
 
 $breakpoints: (
   xs: 0,

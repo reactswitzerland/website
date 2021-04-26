@@ -1,5 +1,9 @@
-import styles from './HomePage.module.scss';
+import Subscribe from '@module/Subscribe/Subscribe';
 
-const HomePage = () => <div className={styles.content}>TEST</div>;
+const HomePage = () => (
+  <>
+    <Subscribe />
+  </>
+);
 
 export default HomePage;

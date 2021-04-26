@@ -4,7 +4,6 @@ import MailchimpAPI from '@api/MailchimpAPI/MailchimpAPI';
 
 const App = ({ memberCount }: { memberCount: number }) => (
   <Default>
-    WE HAVE {memberCount} Members
     <HomePage />
   </Default>
 );
