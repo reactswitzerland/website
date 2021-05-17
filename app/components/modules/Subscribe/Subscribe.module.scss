@@ -15,7 +15,7 @@
   flex-basis: 55%;
   flex-flow: column;
   justify-content: space-between;
-  padding: 4.5rem;
+  padding: 4.5rem 6rem 4.5rem 4.5rem;
   background-color: $color-primary;
   clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
   color: $color-white;
@@ -26,6 +26,14 @@
   flex-basis: 45%;
   align-items: flex-end;
   padding: 4.5rem;
+  gap: 2rem;
+}
+
+.mail {
+  flex-basis: 100%;
+  color: $color-white;
+  font-size: 2.4rem;
+  text-align: center;
 }
 
 .input {

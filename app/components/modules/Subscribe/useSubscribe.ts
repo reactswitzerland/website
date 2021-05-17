@@ -11,6 +11,7 @@ export enum LOADING_STATE {
 interface UseSubscribeReturn {
   mail: string;
   loadingState: LOADING_STATE;
+  isSubscribed: boolean;
   setMail: (mail: string) => void;
   submit: () => void;
 }
@@ -21,19 +22,17 @@ const useSubscribe = (): UseSubscribeReturn => {
     LOADING_STATE.INITIAL
   );
 
-  const submit = async () => {
+  const submit = () => {
     setLoadingState(LOADING_STATE.LOADING);
-    const response = await MailchimpAPI.addSubscriber(mail);
-    if (response.status === 200) {
-      setLoadingState(LOADING_STATE.SUCCESS);
-      return;
-    }
-    setLoadingState(LOADING_STATE.ERROR);
+    MailchimpAPI.addSubscriber(mail)
+      .then(() => setLoadingState(LOADING_STATE.SUCCESS))
+      .catch(() => setLoadingState(LOADING_STATE.ERROR));
   };
 
   return {
     loadingState,
     mail,
+    isSubscribed: loadingState === LOADING_STATE.SUCCESS,
     setMail,
     submit,
   };
