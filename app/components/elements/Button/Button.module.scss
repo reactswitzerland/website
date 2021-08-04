@@ -1,8 +1,11 @@
 @import 'app.scss';
 
 .button {
+  display: inline-flex;
   min-width: 12rem;
   height: 3.5rem;
+  align-items: center;
+  justify-content: center;
   border: none;
   background: $color-primary;
   border-radius: 0.3rem;

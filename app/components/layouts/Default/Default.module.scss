@@ -4,6 +4,7 @@
   display: grid;
   margin: 0 auto;
   grid-column-gap: $grid-gutter-width;
+  grid-row-gap: calc(#{$grid-gutter-width} * 2);
   grid-template-columns: repeat($grid-columns, 1fr);
   @include content-width;
 }

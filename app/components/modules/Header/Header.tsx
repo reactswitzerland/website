@@ -3,7 +3,10 @@ import styles from './Header.module.scss';
 
 const Header = (): JSX.Element => (
   <header className={styles.header}>
-    <h1>React Switzerland</h1>
+    <div className={styles.icons}>
+      <Icon icon={Icons.DISCORD} />
+      <Icon icon={Icons.GITHUB} />
+    </div>
   </header>
 );
 
