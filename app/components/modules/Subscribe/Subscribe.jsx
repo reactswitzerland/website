@@ -1,5 +1,6 @@
 import styles from './Subscribe.module.scss';
 import useSubscribe, { LOADING_STATE } from '@module/Subscribe/useSubscribe';
+import Button from '@element/Button/Button';
 
 const TEXTS = {
   TITLE: {
@@ -39,7 +40,7 @@ const Subscribe = () => {
               onChange={(e) => setMail(e.target.value)}
               disabled={loadingState === LOADING_STATE.LOADING}
             />
-            <button onClick={submit}>submit</button>
+            <Button onClick={submit}>submit</Button>
           </>
         )}
       </div>

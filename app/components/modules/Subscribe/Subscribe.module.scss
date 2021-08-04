@@ -3,30 +3,44 @@
 .subscribe {
   display: flex;
   overflow: hidden;
-  height: 200px;
+  height: 35rem;
+  flex-flow: column;
   background: $default-gradient;
   border-radius: $default-border-radius;
   box-shadow: 0 0.1rem 2.4rem -0.1rem rgba(0, 0, 0, 0.1);
   grid-column: span 12;
+
+  @include breakpoint('lg') {
+    height: 20rem;
+    flex-flow: row;
+  }
 }
 
 .description {
   display: flex;
-  flex-basis: 55%;
+  flex-basis: 100%;
   flex-flow: column;
   justify-content: space-between;
   padding: 4.5rem 6rem 4.5rem 4.5rem;
   background-color: $color-primary;
-  clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
   color: $color-white;
+
+  @include breakpoint('lg') {
+    flex-basis: 55%;
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+  }
 }
 
 .inputWrapper {
   display: flex;
-  flex-basis: 45%;
+  flex-basis: 100%;
   align-items: flex-end;
   padding: 4.5rem;
   gap: 2rem;
+
+  @include breakpoint('lg') {
+    flex-basis: 45%;
+  }
 }
 
 .mail {
