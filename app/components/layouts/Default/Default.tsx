@@ -5,10 +5,10 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Default = ({ children }: Props) => (
+const Default = ({ children }: Props): JSX.Element => (
   <div className={styles.default}>
     <Header />
-    <div className={styles.content}>{children}</div>
+    {children}
   </div>
 );
 

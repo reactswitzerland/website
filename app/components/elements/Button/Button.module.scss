@@ -1,0 +1,12 @@
+@import 'app.scss';
+
+.button {
+  min-width: 12rem;
+  height: 3.5rem;
+  border: none;
+  background: $color-primary;
+  border-radius: 0.3rem;
+  color: $color-white;
+  font-size: 1.8rem;
+  letter-spacing: 0.05rem;
+}

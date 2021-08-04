@@ -18,6 +18,8 @@ export default async function handler(
 
     res.status(200).json({ mail });
   } catch {
-    res.status(400).json({ message: 'There has been an error' });
+    res
+      .status(400)
+      .json({ message: 'There has been an error with your registration' });
   }
 }

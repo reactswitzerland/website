@@ -2,12 +2,6 @@
 
 .default {
   display: grid;
-  min-height: 100vh;
-  grid-template-rows: 14rem 1fr;
-}
-
-.content {
-  display: grid;
   margin: 0 auto;
   grid-column-gap: $grid-gutter-width;
   grid-template-columns: repeat($grid-columns, 1fr);
