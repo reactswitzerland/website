@@ -20,7 +20,7 @@ const TEXTS = {
   },
 };
 
-const Subscribe = () => {
+const Subscribe = (): JSX.Element => {
   const { loadingState, mail, isSubscribed, setMail, submit } = useSubscribe();
 
   return (

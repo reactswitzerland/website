@@ -31,3 +31,11 @@
     max-width: map_get($container-max-widths, xl);
   }
 }
+
+@mixin hover {
+  @media (hover: hover), (-ms-high-contrast: none) {
+    &:hover {
+      @content;
+    }
+  }
+}

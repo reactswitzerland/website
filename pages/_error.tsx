@@ -1,4 +1,4 @@
-const Error = ({ statusCode }: { statusCode?: number }) => (
+const Error = ({ statusCode }: { statusCode?: number }): JSX.Element => (
   <p>
     {statusCode
       ? `An error ${statusCode} occurred on server`

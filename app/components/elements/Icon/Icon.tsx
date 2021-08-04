@@ -23,12 +23,12 @@ const icons = {
   ),
 };
 
-type Props = {
+interface Props {
   icon: Icons;
   alt?: string;
-};
+}
 
-const Icon = ({ icon, alt }: Props) => (
+const Icon = ({ icon, alt }: Props): JSX.Element => (
   <svg
     width={20}
     height={20}
