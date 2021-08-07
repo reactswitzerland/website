@@ -2,27 +2,33 @@ import Default from '@layout/Default/Default';
 import HomePage from '@template/HomePage/HomePage';
 import MailchimpAPI from '@api/MailchimpAPI/MailchimpAPI';
 import SupabaseAPI from '@api/SupabaseAPI/SupabaseAPI';
+import { useEffect, useState } from 'react';
 
 interface Props {
-  memberCount: number;
   upcomingEvent: Event;
 }
 
-const App = ({ memberCount, upcomingEvent }: Props): JSX.Element => (
-  <Default>
-    <HomePage memberCount={memberCount} upcomingEvent={upcomingEvent} />
-  </Default>
-);
+const App = ({ upcomingEvent }: Props): JSX.Element => {
+  const [memberCount, setMemberCount] = useState<number>(0);
+
+  useEffect(() => {
+    MailchimpAPI.getSubscriberCount().then((res) =>
+      setMemberCount(res.data.count)
+    );
+  }, []);
+
+  return (
+    <Default>
+      <HomePage memberCount={memberCount} upcomingEvent={upcomingEvent} />
+    </Default>
+  );
+};
 
 export async function getStaticProps() {
-  const {
-    data: { count: memberCount },
-  } = await MailchimpAPI.getSubscriberCount();
   const { data: upcomingEvent } = await SupabaseAPI.getNextEvent();
 
   return {
     props: {
-      memberCount,
       upcomingEvent: upcomingEvent[0],
     },
     revalidate: 1,
