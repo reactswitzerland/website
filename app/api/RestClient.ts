@@ -1,5 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 
+axios.defaults.baseURL = process.env.NEXT_PUBLIC_SUPABASE_KEY;
 axios.defaults.headers.common.Accept = 'application/json';
 axios.defaults.timeout = 12000;
 
