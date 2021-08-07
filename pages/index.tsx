@@ -8,8 +8,7 @@ interface Props {
   upcomingEvent: Event;
 }
 
-
-const App = ({ memberCount }: Props): JSX.Element => (
+const App = ({ memberCount, upcomingEvent }: Props): JSX.Element => (
   <Default>
     <HomePage memberCount={memberCount} upcomingEvent={upcomingEvent} />
   </Default>

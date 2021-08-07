@@ -13,6 +13,6 @@ const HomePage = ({ memberCount, upcomingEvent }: Props): JSX.Element => (
     <Counter count={memberCount} />
     <Subscribe />
   </>
-}
+);
 
 export default HomePage;
