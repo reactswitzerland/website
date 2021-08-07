@@ -1,0 +1,64 @@
+@import 'app.scss';
+
+.container {
+  overflow: hidden;
+  margin-bottom: 6rem;
+  background: $default-gradient;
+  border-radius: $default-border-radius;
+  color: $color-white;
+  grid-column: span 12;
+
+  @include breakpoint('lg') {
+    display: flex;
+  }
+}
+
+.description {
+  padding: 4.5rem;
+
+  @include breakpoint('lg') {
+    width: 61.8%;
+  }
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4.5rem;
+  background-color: $color-primary;
+
+  @include breakpoint('lg') {
+    min-width: 38.2%;
+    flex-shrink: 0;
+    @supports (clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%)) {
+      padding-left: 8.5rem;
+      clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+  }
+}
+
+.count {
+  display: flex;
+}
+
+.number {
+  position: relative;
+  overflow: hidden;
+  padding: 0.4em;
+  margin: 0 0.4em;
+  background: #292d3e;
+  border-radius: 0.3rem;
+  font-size: 3rem;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 -0.3rem 0.3rem -0.3rem rgb(0 0 0 / 55%);
+    content: '';
+  }
+}

@@ -2,9 +2,13 @@ import Default from '@layout/Default/Default';
 import HomePage from '@template/HomePage/HomePage';
 import MailchimpAPI from '@api/MailchimpAPI/MailchimpAPI';
 
-const App = ({ memberCount }: { memberCount: number }) => (
+interface Props {
+  memberCount: number;
+}
+
+const App = ({ memberCount }: Props): JSX.Element => (
   <Default>
-    <HomePage />
+    <HomePage memberCount={memberCount} />
   </Default>
 );
 
