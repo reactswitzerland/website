@@ -14,12 +14,27 @@ html {
 body {
   box-sizing: border-box;
   background-color: #121212;
+  color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
 }
 
+h1 {
+  font-size: 5.5rem;
+}
+
 h2 {
   font-size: 4rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1.6rem;
 }
 
 p {
