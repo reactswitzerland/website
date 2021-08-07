@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '@element/Button/Button';
 import styles from './Counter.module.scss';
 
 interface Props {
@@ -19,13 +18,6 @@ const Counter = ({ count }: Props): JSX.Element => {
         <p>
           Become a part of our React community to share and receive knowledge.
         </p>
-        <Button
-          onClick={() => {
-            alert('😉');
-          }}
-        >
-          Join now
-        </Button>
       </div>
       <div className={styles.counter}>
         <div className={styles.count}>
