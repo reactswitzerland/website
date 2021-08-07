@@ -7,9 +7,15 @@
   align-items: center;
   justify-content: center;
   border: none;
+  appearance: none;
   background: $color-primary;
   border-radius: 0.3rem;
   color: $color-white;
+  cursor: pointer;
   font-size: 1.8rem;
   letter-spacing: 0.05rem;
+
+  @include hover {
+    background: darken($color-primary, 10%);
+  }
 }

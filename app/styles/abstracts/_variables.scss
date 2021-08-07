@@ -5,12 +5,7 @@ $color-white: #fff;
 $grid-columns: 12;
 $grid-gutter-width: 3rem;
 
-$default-gradient: linear-gradient(
-  135deg,
-  rgba(255, 255, 255, 0.4) 0%,
-  rgba(255, 255, 255, 0.1) 100%,
-  rgba(216, 216, 216, 0.1) 100%
-);
+$default-gradient: linear-gradient(345deg, #33363b, #565656);
 $default-border-radius: 2rem;
 $default-box-shadow: 0 0.1rem 2.4rem -0.1rem rgba(0, 0, 0, 0.1);
 

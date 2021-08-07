@@ -8,19 +8,21 @@ interface Props {
   upcomingEvent: Event;
 }
 
-const App = ({ memberCount, upcomingEvent }: Props) => (
+const App = ({ memberCount, upcomingEvent }: Props): JSX.Element => (
   <Default>
-    <HomePage upcomingEvent={upcomingEvent} />
+    <HomePage memberCount={memberCount} upcomingEvent={upcomingEvent} />
   </Default>
 );
 
 export async function getStaticProps() {
-  const { data } = await MailchimpAPI.getSubscriberCount();
+  const {
+    data: { count: memberCount },
+  } = await MailchimpAPI.getSubscriberCount();
   const { data: upcomingEvent } = await SupabaseAPI.getNextEvent();
 
   return {
     props: {
-      memberCount: data.count,
+      memberCount,
       upcomingEvent: upcomingEvent[0],
     },
     revalidate: 1,

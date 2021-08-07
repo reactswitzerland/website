@@ -29,12 +29,12 @@ c-2.9,0.5-4.5-0.3-6-0.9l-0.5-0.3c0,0,0.6,0.9,2.2,1.4c-0.4,0.5-0.8,1-0.8,1C5.7,15
   ),
 };
 
-type Props = {
+interface Props {
   icon: Icons;
   alt?: string;
-};
+}
 
-const Icon = ({ icon, alt }: Props) => (
+const Icon = ({ icon, alt }: Props): JSX.Element => (
   <svg
     width={30}
     height={30}
